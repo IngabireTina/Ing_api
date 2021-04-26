@@ -150,7 +150,7 @@ def profile(request,username):
     return render(request, 'users/profile.html',{"profile":profile,"profile_details":profile_details,"projects":projects}) 
 
 
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='login')
 def post_site(request):
     current_user = request.user
     if request.method == 'POST':
