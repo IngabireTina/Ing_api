@@ -25,7 +25,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-     url('accounts/', include('registration.backends.simple.urls')),
-    url('logout/', logout, {"next_page": '/'}), 
-    url('api-token-auth/', obtain_auth_token)
+    # path('accounts/', include('registration.urls')),
+    # path('logout/', logout, {"next_page": '/'}), 
+    path('api-token-auth/', obtain_auth_token)
 ]

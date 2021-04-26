@@ -79,4 +79,13 @@ class Rates(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     project = models.IntegerField(default=0) 
     
-        
+
+class Comments(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    comments = models.TextField(max_length=400)
+    pro_id = models.IntegerField(default=0) 
+    
+    
+    
+
+           
