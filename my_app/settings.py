@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'url_or_relative_url_field',
     'tinymce',
+    'widget_tweaks',
     'bootstrap4',
     'rest_framework',
+    'crispy_forms',
     'rest_framework.authtoken',
 ]
 
@@ -147,6 +149,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'home'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
